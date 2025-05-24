@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #3f0e40;
+    /* Tailwind primary */
+}
