@@ -1,6 +1,6 @@
 # Tejas P. Sanghai - Portfolio Website
 
-This is a personal portfolio website built with React.js, inspired by the clean, modern, and animated style of [siprofile.me](https://www.siprofile.me/). It showcases my skills, projects, experience, and contact information with smooth animations and a light color theme.
+This is a personal portfolio website built with React.js, inspired by the clean, modern, and animated style.. It showcases my skills, projects, experience, and contact information with smooth animations and a light color theme.
 
 ---
 
