@@ -1,20 +1,34 @@
 import React from "react";
+import "./index.css";
+
+import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
-import Achievements from "./components/Achievements";
-import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
-export default function App() {
+import { motion, useScroll } from "framer-motion";
+
+function App() {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <div className="container">
+    <>
+      {/* Scroll progress bar */}
+      <motion.div
+        className="scroll-progress"
+        style={{ scaleX: scrollYProgress }}
+      />
+
+      <Navbar />
       <Header />
       <About />
       <Projects />
       <Skills />
-      <Achievements />
-      <Footer />
-    </div>
+      <Contact />
+    </>
   );
 }
+
+export default App;

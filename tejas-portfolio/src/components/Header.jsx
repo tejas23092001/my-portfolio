@@ -1,29 +1,23 @@
 import React from "react"
-import { TypeAnimation } from "react-type-animation"
+import { motion } from "framer-motion"
 
 export default function Header() {
 	return (
-		<header>
-			<h1>Tejas P. Sanghai</h1>
-			<TypeAnimation
-				sequence={[
-					"Software Engineer",
-					2000,
-					"Java Developer",
-					2000,
-					"Tech Enthusiast",
-					2000,
-				]}
-				wrapper="span"
-				speed={50}
-				repeat={Infinity}
-				style={{
-					display: "inline-block",
-					fontSize: "1.2rem",
-					color: "#93c5fd",
-				}}
-			/>
-			<p>📞 +91-8329045476 | 📧 tejas230309@gmail.com</p>
-		</header>
+		<motion.section
+			id="home"
+			className="container"
+			initial={{ opacity: 0, y: 40 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.8 }}
+		>
+			<h1>Hi, I'm Tejas P. Sanghai 👋</h1>
+			<p>Software Engineer</p>
+			<button
+				className="btn"
+				onClick={() => (window.location.href = "#contact")}
+			>
+				Contact Me
+			</button>
+		</motion.section>
 	)
 }

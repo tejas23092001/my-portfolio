@@ -1,29 +1,55 @@
 import React from "react"
+import { motion } from "framer-motion"
+
+const skills = [
+	"C/C++",
+	"Python",
+	"JavaScript",
+	"Go",
+	"PHP",
+	"ReactJS",
+	"Docker",
+	"Kubernetes",
+	"AWS",
+]
 
 export default function Skills() {
 	return (
-		<section id="skills">
-			<h2>Technical Skills</h2>
-			<ul>
-				<li>
-					<strong>Languages:</strong> C/C++, Python, JavaScript, Go,
-					PHP
-				</li>
-				<li>
-					<strong>Development:</strong> HTML, CSS, Bootstrap, ReactJS
-				</li>
-				<li>
-					<strong>Core Competencies:</strong> Data Structures,
-					Algorithms, OS, OOPs, Networks, DBMS
-				</li>
-				<li>
-					<strong>DevOps:</strong> Docker, Kubernetes, AWS
-				</li>
-				<li>
-					<strong>Tools:</strong> Git & GitHub, Postman, VS Code,
-					Jira, Confluence, ArgoCD, SumoLogic
-				</li>
+		<motion.section
+			id="skills"
+			className="container"
+			initial={{ opacity: 0, y: 40 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ once: true }}
+			transition={{ duration: 0.8 }}
+		>
+			<h2>Skills</h2>
+			<ul
+				style={{
+					listStyle: "none",
+					padding: 0,
+					display: "flex",
+					flexWrap: "wrap",
+					gap: "12px",
+					justifyContent: "center",
+				}}
+			>
+				{skills.map((skill) => (
+					<li
+						key={skill}
+						style={{
+							background: "#3b82f6",
+							color: "#fff",
+							padding: "8px 15px",
+							borderRadius: "20px",
+							fontWeight: "600",
+							fontSize: "0.9rem",
+						}}
+					>
+						{skill}
+					</li>
+				))}
 			</ul>
-		</section>
+		</motion.section>
 	)
 }
